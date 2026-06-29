@@ -1,0 +1,8 @@
+.block-editor { display: flex; flex-direction: column; flex: 1; overflow: hidden; }
+.be-actions { display: flex; align-items: center; gap: 8px; padding: 4px 12px; background: #181825; border-bottom: 1px solid #313244; }
+.be-lang { font-weight: bold; color: #a6e3a1; font-size: 12px; background: #313244; padding: 2px 8px; border-radius: 4px; }
+.be-actions button { background: #313244; border: none; color: #cdd6f4; padding: 3px 10px; border-radius: 4px; cursor: pointer; font-size: 12px; }
+.be-actions button:hover { background: #45475a; }
+.be-body { display: flex; flex: 1; overflow: hidden; }
+.blockly-div { flex: 1; height: 100%; }
+.code-preview { width: 340px; background: #181825; color: #a6e3a1; font-size: 12px; padding: 12px; overflow-y: auto; border-left: 1px solid #313244; white-space: pre-wrap; font-family: 'Cascadia Code', monospace; }

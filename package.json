@@ -1,0 +1,68 @@
+{
+  "name": "blockcode",
+  "version": "1.0.0",
+  "description": "Visual block-based IDE with code parsing and generation",
+  "main": "main.js",
+  "scripts": {
+    "start": "concurrently \"vite\" \"wait-on --timeout 30000 http://localhost:5173 && electron .\"",
+    "build": "vite build && electron-builder",
+    "vite": "vite",
+    "electron": "electron ."
+  },
+  "dependencies": {
+    "blockly": "10.4.3",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.7.0",
+    "concurrently": "8.2.2",
+    "electron": "^42.5.1",
+    "electron-builder": "^26.15.3",
+    "vite": "^8.1.0",
+    "vite-plugin-electron": "0.28.4",
+    "wait-on": "7.2.0"
+  },
+  "build": {
+    "appId": "com.blockcode.app",
+    "productName": "BlockCode",
+    "files": [
+      "dist/**/*",
+      "main.js",
+      "preload.js"
+    ],
+    "win": {
+      "target": [{ "target": "nsis", "arch": ["x64"] }],
+      "icon": "assets/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "BlockCode",
+      "installerIcon": "assets/icon.ico",
+      "uninstallerIcon": "assets/icon.ico"
+    },
+    "fileAssociations": [
+      { "ext": "py",   "name": "Python File",     "description": "Open with BlockCode", "role": "Editor" },
+      { "ext": "js",   "name": "JavaScript File",  "description": "Open with BlockCode", "role": "Editor" },
+      { "ext": "ts",   "name": "TypeScript File",  "description": "Open with BlockCode", "role": "Editor" },
+      { "ext": "java", "name": "Java File",        "description": "Open with BlockCode", "role": "Editor" },
+      { "ext": "cpp",  "name": "C++ File",         "description": "Open with BlockCode", "role": "Editor" },
+      { "ext": "c",    "name": "C File",           "description": "Open with BlockCode", "role": "Editor" },
+      { "ext": "rb",   "name": "Ruby File",        "description": "Open with BlockCode", "role": "Editor" },
+      { "ext": "go",   "name": "Go File",          "description": "Open with BlockCode", "role": "Editor" },
+      { "ext": "rs",   "name": "Rust File",        "description": "Open with BlockCode", "role": "Editor" },
+      { "ext": "php",  "name": "PHP File",         "description": "Open with BlockCode", "role": "Editor" }
+    ],
+    "mac": {
+      "target": "dmg",
+      "icon": "assets/icon.icns"
+    },
+    "linux": {
+      "target": "AppImage",
+      "icon": "assets/icon.png"
+    }
+  }
+}

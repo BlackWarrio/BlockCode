@@ -1,0 +1,7 @@
+.filetree { width: 220px; background: #181825; border-right: 1px solid #313244; overflow-y: auto; font-size: 13px; flex-shrink: 0; }
+.filetree.empty { display: flex; align-items: center; justify-content: center; color: #585b70; }
+.filetree-header { padding: 8px 12px; font-weight: bold; color: #89b4fa; border-bottom: 1px solid #313244; }
+.dir-label { padding: 4px 12px; color: #a6adc8; cursor: pointer; user-select: none; }
+.dir-label:hover { background: #24273a; }
+.file-item { padding: 4px 20px; cursor: pointer; color: #cdd6f4; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.file-item:hover { background: #313244; }
