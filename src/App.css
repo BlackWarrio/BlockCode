@@ -1,0 +1,9 @@
+.app { display: flex; flex-direction: column; height: 100vh; }
+.workspace { display: flex; flex: 1; overflow: hidden; }
+.editor-area { display: flex; flex-direction: column; flex: 1; overflow: hidden; }
+.tabs { display: flex; background: #181825; border-bottom: 1px solid #313244; overflow-x: auto; }
+.tab { background: #24273a; border: none; color: #a6adc8; padding: 6px 14px; cursor: pointer; font-size: 13px; display: flex; align-items: center; gap: 6px; border-right: 1px solid #313244; white-space: nowrap; }
+.tab.active { background: #1e1e2e; color: #cdd6f4; border-top: 2px solid #89b4fa; }
+.tab-close { color: #585b70; font-size: 16px; line-height: 1; }
+.tab-close:hover { color: #f38ba8; }
+.empty-state { flex: 1; display: flex; align-items: center; justify-content: center; color: #585b70; font-size: 16px; }
